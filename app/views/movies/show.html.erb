@@ -1,0 +1,17 @@
+<div class="row">
+
+  <%= render 'side_column' %>
+  <div class="medium-10 columns">
+
+    <%= render partial: "movie", locals: {movie: @movie} %>
+
+    <div>
+      <%= button_to "Rent!", movie_rentals_path(@movie), class: :button %>
+    </div>
+
+    <div>
+      <%= link_to "Back", movies_path, class: :button %>
+    </div>
+
+  </div>
+</div>
